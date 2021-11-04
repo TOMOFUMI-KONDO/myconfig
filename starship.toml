@@ -1,0 +1,25 @@
+add_newline = false
+
+[directory]
+truncate_to_repo = false
+
+[git_branch]
+symbol = "branch "
+
+[golang]
+symbol = 'go '
+
+[nodejs]
+symbol = 'node '
+
+[ruby]
+symbol = 'ruby '
+
+[terraform]
+symbol = 'terraform '
+
+[package]
+symbol = 'package '
+
+[aws]
+symbol = 'aws '
