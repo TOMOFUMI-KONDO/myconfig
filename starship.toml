@@ -10,7 +10,7 @@ symbol = "Branch "
 symbol = 'Go '
 
 [nodejs]
-symbol = 'Nodejs '
+symbol = 'Node '
 
 [ruby]
 symbol = 'Ruby '
@@ -29,4 +29,7 @@ symbol = 'Package '
 disabled = true
 
 [aws]
-symbol = 'AWS'
+symbol = 'AWS '
+
+[vagrant]
+symbol = 'Vagrant '
