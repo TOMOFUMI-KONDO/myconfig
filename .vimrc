@@ -13,7 +13,7 @@ nnoremap j gj
 nnoremap k gk
 
 "入力モード中に素早くjjと入力した場合はEscとみなす
-inoremap jj <Esc>
+"inoremap jj <Esc>
 
 "tab/indentの設定
 set shellslash
