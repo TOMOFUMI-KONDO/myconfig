@@ -21,6 +21,7 @@ alias gs='git status'
 alias gd='git diff'
 alias gds='git diff --staged'
 alias gl='git log'
+alias glol='git log --graph --decorate --pretty=oneline --all --abbrev-commit'
 alias gb='git branch'
 alias gcb='git checkout -b'
 alias gsw='git switch'
@@ -52,6 +53,15 @@ eval "$(direnv hook zsh)"
 export EDITOR="vim"
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
+# homebrew
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
+fi
+
 # HSTR configuration - add this to ~/.zshrc
 alias hh=hstr                    # hh to be alias for hstr
 setopt histignorespace           # skip cmds w/ leading space from history
@@ -68,14 +78,13 @@ zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' '+m:{[:upper:
 # Load Git completion
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 fpath=(~/.zsh $fpath)
-autoload -Uz compinit && compinit
 
 # AWS CLI completion
 autoload bashcompinit && bashcompinit
-autoload -Uz compinit && compinit
-complete -C '/usr/local/bin/aws_completer' aws
+complete -C '/opt/homebrew/bin/aws_completer' aws
 
 # Go SDK
+export PATH="$PATH:$(go env GOPATH)/bin"
 alias go1.16.9="$HOME/sdk/go1.16.9/bin/go"
 
 # Flutter
@@ -85,5 +94,8 @@ alias go1.16.9="$HOME/sdk/go1.16.9/bin/go"
 eval "$(rbenv init - zsh)"
 export PATH="$HOME/.rbenv/shims:$PATH"
 alias pod="$HOME/.rbenv/shims/pod"
+
+# heroku
+heroku autocomplete --refresh-cache
 
 bindkey -e
