@@ -36,6 +36,7 @@ symbol = 'AWS '
 
 [gcloud]
 symbol = 'GCP '
+format = 'on [$symbol$project (\($region\) )]($style) '
 
 [battery]
 disabled=true
