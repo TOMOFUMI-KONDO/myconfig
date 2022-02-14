@@ -1,5 +1,4 @@
 add_newline = false
-command_timeout = 1000
 
 [directory]
 truncate_to_repo = false
@@ -11,7 +10,7 @@ symbol = "Branch "
 symbol = 'Go '
 
 [nodejs]
-symbol = 'Node '
+symbol = 'Nodejs '
 
 [ruby]
 symbol = 'Ruby '
@@ -21,6 +20,9 @@ symbol = 'Python '
 
 [php]
 symbol = 'PHP '
+
+[dart]
+symbol = 'Dart '
 
 [terraform]
 symbol = 'Terraform '
@@ -32,5 +34,8 @@ disabled = true
 [aws]
 symbol = 'AWS '
 
-[vagrant]
-symbol = 'Vagrant '
+[gcloud]
+symbol = 'GCP '
+
+[battery]
+disabled=true
